@@ -1,0 +1,163 @@
+body,html
+{
+  height: 90vh;
+  font-size: 20px;
+}
+
+.back hr
+{
+  top: 50%;
+  color: #2d4d58;
+  background: #ccc;
+  box-shadow: 1px 28px 2px 30px #2d4d58;
+  position: relative;
+}
+
+.back
+{
+    height: 90vh;
+    width:100%;
+    position: absolute;
+}
+
+.container
+{
+  position: relative;
+  height: 90vh;
+  width:100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction:column;
+  align-items: center;
+  -ms-flex-align: center;
+  justify-content:space-around;
+  -ms-flex-pack: space-around;
+}
+
+.container .img
+{
+   height:35%;
+   text-align: center;
+   z-index:2;
+}
+
+.container .img img
+{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   padding: 20px 2px 0px 2px;
+   border: 1px solid #2d4d58;
+   background: #fff;
+}
+
+.container .txt
+{
+  height: 65%;
+}
+
+.container .txt h2
+{
+  font-family: 'exo 2';
+  margin: 0px;
+  font-size: 2.8em;
+  display: inline-block;
+  width: 100%;
+}
+
+.container .txt h2 .inicial
+{
+  color: #2d4d58;
+  font-size: 1.2em;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container .txt p
+{
+  color:#f4f3f3;
+  font-size: 20px;
+  margin: 10px;
+  text-indent: 50px;
+}
+
+.container .txt a
+{
+  position:absolute;
+  top:47%;
+  right: 0px;
+  font-size: 1.5em;
+  overflow: hidden;
+  width: 72px;
+  height: 70px;
+}
+
+.container .txt a span
+{
+  color: #f4f3f3;
+  border: 1px solid #2d4d58;
+  background: #2d4d58;
+  border-bottom-right-radius: 15%;
+  padding: 15px;
+  border: 1px solid #f4f3f3;
+}
+
+.container .txt a span:hover
+{
+    color: #2d4d58;
+    background: #f4f3f3;
+}
+
+@media screen and (min-width:768px)
+{
+
+  .container
+  {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction:row;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content:space-around;
+    -ms-flex-pack: space-around;
+  }
+
+  .container .img
+  {
+    height:auto;
+    width:30%;
+  }
+
+  .container .txt
+  {
+    height: auto;
+    width: 70%;
+  }
+
+  .container .txt h2
+  {
+    margin: -37px 0px 0px 0px;
+    font-size: 3em;
+  }
+
+  .container .txt h2 .inicial
+  {
+    color: #2d4d58;
+    font-size: 1.2em;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .container .txt p
+  {
+    text-indent: 150px;
+    font-size: 30px;
+    color: #f4f3f3;
+    margin: 0px 0px 20px 0px;
+  }
+
+}

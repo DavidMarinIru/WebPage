@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+   portafolio desarrollador web
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="charset" charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Arvo|Exo+2" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/style-gen.css"/>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+
+<script type="text/javascript">
+
+   $(document).ready(function(){
+    //funcion que posiciona un ancla de la pagina con un scroll lento
+    $('a').click(function(){
+      $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+        return false;
+      });
+    });
+
+    //funcion que muestra el menu cuando el usuario pincha en el boton de la cabecera (solo moviles)
+    function openNav()
+	  {
+	    $("#btn-nav").css('display','none');
+      $("nav").css('display','block');
+		  $("nav ul").prepend("<li id='firstMenu'><a id='close' href='javascript:void(0)'></a></li>");
+		  $("#close").css('display','block');
+		  $("#close").click(
+		    function(){
+			       $("nav").css('display','none');
+			       $("#btn-nav").css('display','inline-block');
+			       $("#firstMenu").remove();
+		     });
+	  }
+
+	$( document ).ready(function( $ ) {
+		$( '#myslider' ).sliderPro({
+			width:1200,
+      height: 220,
+			arrows: true,
+			buttons: false,
+			waitForLayers: true,
+			autoplay: true,
+      forceSize: 'fullWidth',
+			breakpoints: {
+				500: {
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+   <header class="cab">
+      <div class="top-cab">
+	     <ul>
+		    <li><a href="#">LLAMANOS (916771212)</a><span class="glyphicon glyphicon-phone-alt"></span></li>
+			<li><a href="#">E-MAIL david.marin@gmail.com</a><span class="glyphicon glyphicon-envelope"></span></li>
+			<li><a href="#">HORARIOS L-V 10:00-18:00</a><span class="glyphicon glyphicon-time"></span></li>
+         </ul>
+	  </div>
+      <nav id="menu">
+		<ul>
+			<li><a href="home.html"><span>Home</span></a><span class="glyphicon glyphicon-option-vertical"></span></li>
+			<li><a href="#Exp"><span>Expeciencia</span></a><span class="glyphicon glyphicon-option-vertical"></span></li>
+			<li><a href="#Training"><span>Formacion</span></a><span class="glyphicon glyphicon-option-vertical"></span></li>
+			<li><a href="#Contact"><span>Contacto</span></a></li>
+		</ul>
+	  </nav>
+      <div class="logo">
+	      <a href="#">Inicio</a>
+      </div>
+	  <h1>
+	     David Marin - Desarrollador Web
+	  </h1>
+	  <button id="btn-nav" type="button" class="btn btn-default btn-sm" onclick="openNav();">
+         <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+   </header>
+   <main class="main">
+	   <div id="myslider" class="slider-pro">
+	 		<div class="sp-slides">
+	 			<div class="sp-slide">
+	 				<img class="sp-image" src="../src/css/images/blank.gif"
+	 					data-src="images/home-slider1.jpg"
+	 					data-retina="images/home-slider1.jpg"/>
+	 				<h2 class="sp-layer sp-white sp-padding"
+	 					data-horizontal="50" data-vertical="50"
+	 					data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+	 					Esfuerzo y dedicación
+	 				</h2>
+	 			</div>
+        <div class="sp-slide">
+	 				<img class="sp-image" src="../src/css/images/blank.gif"
+	 					data-src="images/home-slider2.jpg"
+	 					data-retina="images/home-slider2.jpg"/>
+	 				<h2 class="sp-layer sp-white sp-padding"
+	 					data-horizontal="50" data-vertical="50"
+	 					data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+	 					Prevalecer la eficiencia
+	 				</h2>
+	 			</div>
+        <div class="sp-slide">
+	 				<img class="sp-image" src="../src/css/images/blank.gif"
+	 					data-src="images/home-slider3.jpg"
+	 					data-retina="images/home-slider3.jpg"/>
+	 				<h2 class="sp-layer sp-white sp-padding"
+	 					data-horizontal="50" data-vertical="50"
+	 					data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
+	 					Contar con grandes equipos de trabajo
+	 				</h2>
+	 			</div>
+	 		</div>
+	 </div>
+	 <div class="mains">
+    <div class="back-part">
+     	<section class="main-parts main-part1">
+    	  <figure class="image">
+    		    <img src="images/home-img1.jpg" />
+    		</figure>
+    		<article class="text">
+    		   <h2>
+    		     Quien soy
+    		   </h2>
+    		   <p>
+             Analista - programador especializado en desarrollo web (incluido design responsive), radicado en Madrid, España.
+             Llevo trabajando en empresas de desarrollo de software/web desde 2009. Actualmente estaría interesado en participar
+             en proyectos de larga duración, comprometiendome, hasta la finalización de los mismos.
+    		   </p>
+    		</article>
+     	 </section>
+    </div>
+    <div>
+      <section id="Exp" class="main-parts main-part2">
+         <article class="article-part2">
+           <div class="cab-part2">
+             <h2>
+               Experiencia Profesional
+             </h2>
+           </div>
+           <div class="list-part2">
+             <ul>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Programador - vb.net (2016)</h3>
+                  <p>Desarrollar aplicación winform en entorno VISUAL STUDIO 2010, utilizando VB:NET, Crystal Report, SqlServer, Linq.</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Programador - asp.net (2014-2015)</h3>
+                  <p>Desarrollar y maquetar aplicaciones web en entorno VISUAL STUDIO 2010, utilizando c#, vb.net, Javascript, jquery, SqlServer, Linq.</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Programador - asp.net (2013)</h3>
+                  <p>Desarrollar aplicación web en entornos VISUAL STUDIO 2010 y SHAREPOINT, utilizando base de datos SQL SERVER y tecnología LINQ.</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Programador - asp.net (2013)</h3>
+                  <p>Desarrollar aplicaciones web en entorno VISUAL STUDIO 2010, utilizando gestores de base de datos MYSQL y SQL SERVER,  tecnologías como JQUERY y AJAX, patrón MVC4 y también tecnología LINQ.</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Analista/Programador - .net (2012)</h3>
+                  <p>Diseñar y desarrollar aplicaciones de escritorio  y aplicaciones web en entorno VISUAL STUDIO 2010, utilizando el gestor de base de datos SQL SERVER y tecnología como JQUERY y AJAX.</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Analista/Programador - .net</h3>
+                  <p>Diseñar y desarrollar aplicaciones, orientadas a grabación, en entorno de desarrollo Visual Studio 2008; Diseñar y crear reportes (Crystal Reports); Diseñar, gestionar y manipular Bases de datos (MySql).Mantenimiento del sistema de la propia empresa (hardware, SO, redes, etc.).</p>
+               </li>
+               <li>
+                  <span class="glyphicon glyphicon-play"></span>
+                  <h3>Programador - asp.net</h3>
+                  <p>Desarrollar aplicación Web en entorno Visual Studio 2008 (ASP.NET), utilizando como lenguaje de servidor VB.NET.</p>
+               </li>
+             </ul>
+           </div>
+         </article>
+      </section>
+    </div>
+    <div id="Training" class="back-part">
+      <section class="main-parts main-part3">
+         <article class="art">
+            <figure>
+              <img src="images/libroAzul.png" />
+            </figure>
+            <h2><span class="glyphicon glyphicon-book"></span>CURSOS</h2>
+            <ul class="lstFrm">
+              <li><span class="glyphicon glyphicon-chevron-right"></span><span class="txtArt">ACCESIBILIDAD WEB</span></li>
+              <li><span class="glyphicon glyphicon-chevron-right"></span><span class="txtArt">PROGRAMACION .NET</span></li>
+              <li><span class="glyphicon glyphicon-chevron-right"></span><span class="txtArt">PROGRAMACION VB.NET</span></li>
+              <li><span class="glyphicon glyphicon-chevron-right"></span><span class="txtArt">ADMINISTRACION DE BASE DE DATOS</span></li>
+              <li><span class="glyphicon glyphicon-chevron-right"></span><span class="txtArt">MANTENIMIENTO Y REPARACION DE ORDENADORES</span></li>
+            </ul>
+         </article>
+         <article class="art">
+           <figure>
+             <img src="images/certificado.png" />
+           </figure>
+           <h2><span class="glyphicon glyphicon-certificate"></span>CERTIFICADOS</h2>
+           <ul class="lstFrm">
+             <li><span class="glyphicon glyphicon-chevron-right"></span>MICROSOFT .NET FRAMEWORK</li>
+             <li><span class="glyphicon glyphicon-chevron-right"></span>MICROSOFT .NET FRAMEWORK.  WEB-BASED CLIENT DEVELOPMENT</li>
+           </ul>
+         </article>
+      </section>
+    </div>
+    <div>
+      <section id="Contact" class="main-parts main-part2">
+        <div class="form-part">
+             <h2>
+               Formulario de contacto
+             </h2>
+             <form id="frm1" class="myForm" action="david.mariniru@gmail.com" method="post">
+               <div>
+                 <label for="txtNom">Nombre</label>
+               </div>
+               <div>
+                 <input type="text" id="txtNom" name="name" placeholder="Nombre" />
+               </div>
+               <div>
+                 <label for="txtApe" >Apellidos</label>
+               </div>
+               <div>
+                 <input type="text" id="txtApe" name="Apellidos" placeholder="Apellidos" />
+               </div>
+               <div>
+                 <label for="txtEmail">E-mail</label>
+               </div>
+               <div>
+                 <input type="text" id="txtEmail" name="Email" required placeholder="E-mail" />
+               </div>
+               <div>
+                 <label for="txtMen">Mensaje</label>
+               </div>
+               <div>
+                 <textarea id="txtMen" name="mensaje" rows="8" cols="35"></textarea>
+               </div>
+               <div class="btn-form">
+                 <input type="reset" value="Reset" />
+                 <input type="submit" value="Enviar" />
+               </div>
+             </form>
+        </div>
+      </section>
+    </div>
+	 </div>
+ </main>
+ <footer>
+   <ul>
+    <li><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;<span>(+34) 677889812</span></li>
+    <li><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span>david.mariniru@gmail.com</span></li>
+  </ul>
+ </footer>
+</body>
+</html>

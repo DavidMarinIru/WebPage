@@ -1,0 +1,614 @@
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+  /* Cabecera */
+ body,html
+ {
+    font-size:15px;
+    font-family: 'exo 2';
+    height: 100%;
+ }
+
+  .cab
+  {
+    height:100px;
+    background:#0e0e0e;
+    border-bottom: 2px solid #2d4d58;
+  }
+
+  .top-cab
+  {
+     display: none;
+     height: 30px;
+     background: #fff;
+     position: absolute;
+     width: 100%;
+     border-bottom: 2px solid #2d4d58;
+  }
+
+  .top-cab ul
+  {
+     display: none;
+     list-style-type: none;
+     height: 100%;
+     margin: 0px 0px 0px 20%;
+  }
+
+  .top-cab ul li
+  {
+     float:left;
+     margin-right: 15px;
+     line-height: 30px; /* HACE FALTA DEFINIR LINE-HEIGHT PORQUE SINO LOS ELEMENTOS HIJOS NO SE AJUSTAN VERTICALMENTE AL MEDIO */
+  }
+
+  .top-cab ul li a
+  {
+     display: inline-block;
+     height: 100%;
+     /*line-height:normal;
+     vertical-align: top;*/ ESTAS DOS LINEAS ES PARA AJUSTAR TOP O BOTTOM YA QUE COMENTANDOLAS SE PONE EN MIDDLE
+  }
+
+  .top-cab ul li span
+  {
+     display: inline-block;
+     height: 100%;
+     margin: 0px 0px 0px 5px;
+     /*line-height:normal;
+     vertical-align: top;*/ ESTAS DOS LINEAS ES PARA AJUSTAR TOP O BOTTOM YA QUE COMENTANDOLAS SE PONE EN MIDDLE
+  }
+
+  nav
+  {
+     position: absolute;
+     display:none;
+     background:black;
+     top:0px;
+     right:0px;
+     background:transparent;
+     z-index: 2;
+  }
+
+  nav ul
+  {
+    list-style-type:none;
+    overflow: hidden;
+    background: black;
+  }
+
+  nav ul li
+  {
+    display: block;
+    line-height:30px;
+    width:100%;
+    border-bottom:1px solid #fff;
+    padding-left:5px;
+  }
+
+  nav ul li:first-child
+  {
+    border-bottom:0px;
+  }
+
+  nav ul li a
+  {
+    position: relative;
+    display:block;
+    height:100%;
+    transition: bottom 0.5s linear;
+  }
+
+  nav ul li a > span
+  {
+    color: #f3f5f5;
+    font-size: 0.9em;
+    color:#f3f5f5;
+  }
+
+  nav ul li:first-child
+  {
+    border-bottom:0px;
+  }
+
+  nav ul li a + span
+  {
+    display: none !important;
+    color: #fff;
+    margin: 5px;
+    font-size: 0.7em;
+  }
+
+  /*boton para cerrar el off canvas */
+  #close
+  {
+    display:block;
+    box-sizing:border-box;
+    width:20px;
+    height:20px;
+    border-width:3px;
+    border-style: solid;
+    border-color:#ccc;
+    border-radius:100%;
+    background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 56%,transparent 56%, transparent 100%);
+    background-color:#ccc;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    margin-left: 110px;
+  }
+
+  .logo
+   {
+     position: relative;
+     top: 5px;
+     left: 5px;
+     width: 80px;
+   }
+
+   .logo a
+   {
+       height: 70px;
+       display: block;
+       background:#fff url(../images/LogoMin.png) no-repeat 40% 100%;
+       text-indent: -4000px;
+       -webkit-border-radius: 20%;
+       -moz-border-radius: 20%;
+       border-radius: 20%;
+       border: 2px solid #2d4d58;
+   }
+
+   header h1
+   {
+     position: relative;
+     color: #f4f3f3;
+     font-size: 1em;
+     margin: 7px 0px 0px 15px;
+   }
+
+   #btn-nav
+   {
+    top: 22px;
+    right: 20px;
+    display:inline-block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+   }
+
+   #btn-nav span
+   {
+      font-size:1.5em;
+      vertical-align: middle;
+   }
+
+   /* Slider */
+
+   #myslider
+   {
+      border-bottom: 2px solid #2d4d58;
+   }
+
+   /* Main  */
+
+   .mains
+   {
+   }
+
+   .main-parts
+   {
+    max-width:1000px;
+    margin:0 auto;
+    height: 100%;
+   }
+
+   .back-part
+   {
+     background: linear-gradient(#0e0e0e, #2d4d58);
+     margin: 2px 0px 1px 0px;
+     padding: 80px 0px 80px 0px;
+   }
+
+   /* Main-part1  */
+
+   .main-part1
+   {
+     box-sizing:border-box;
+     overflow: hidden;
+     width:100%;
+   }
+
+   .main-part1 .image
+   {
+    text-align:center;
+    margin-bottom: 10px;
+   }
+
+   .main-part1 .image img
+   {
+      width: 100%;
+      max-height: 300px;
+      max-width: 200px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 30px;
+      border: 1px solid #2d4d58;
+      padding: 5px;
+      background: #f4f3f3;
+   }
+
+   .main-part1 .text
+   {
+      display:inline-block;
+      position:relative;
+      width:100%;
+   }
+
+   .main-part1 .text h2
+   {
+      border-bottom: 1px solid #2d4d58;
+      box-shadow: 1px 1px 5px #2d4d58;
+      text-indent: 20px;
+      color:#f4f3f3;
+      padding: 2px 0px 2px 0px;
+      font-size:1.5em;
+   }
+
+   .main-part1 .text p
+   {
+     margin: 10px 5px 0px 30px;
+     padding-right: 10px;
+     font-size: 1em;
+     color: #f4f3f3;
+   }
+
+   .main-part2
+   {
+     padding: 3px;
+   }
+
+   .main-part2 .article-part2
+   {
+      display: flex;
+      display: -ms-flexbox;
+      flex-direction: column;
+      -ms-flex-direction:column;
+      align-items: center;
+      -ms-flex-align: center;
+   }
+
+   .main-part2 .article-part2 .cab-part2
+   {
+     width:100%;
+   }
+
+   .main-part2 .article-part2 .cab-part2 h2
+   {
+     position: relative;
+     color: #2d4d58;
+     border-bottom: 1px solid #2d4d58;
+     box-shadow: 1px 1px 5px #2d4d58;
+     text-indent: 20px;
+     padding: 2px 0px 2px 0px;
+     margin: 0;
+     font-size: 1.5em;
+   }
+
+   .main-part2 .article-part2 .list-part2
+   {
+     border-left: 1px solid #2d4d58;
+     padding-top: 20px;
+     margin-left: 5px;
+     width:100%;
+   }
+
+   .main-part2 .article-part2 .list-part2 ul
+   {
+      list-style-type: none;
+   }
+
+   .main-part2 .article-part2 .list-part2 ul li
+   {
+   }
+
+   .main-part2 .article-part2 .list-part2 ul li > span
+   {
+     left: -1px;
+     font-size: 0.5em;
+     top: -2px;
+     color: #2d4d58;
+   }
+
+   .main-part2 .article-part2 .list-part2 ul li h3
+   {
+      display: inline-block;
+      font-size: 1.2em;
+      margin-top: 15px;
+      color:#2d4d58;
+   }
+
+   .main-part2 .article-part2 .list-part2 ul li p
+   {
+     margin-left: 30px;
+     font-size: 0.9em;
+     color:#2d4d58;
+   }
+
+   .main-part3
+   {
+      display:flex;
+      display: -ms-flexbox;
+      flex-direction:column;
+      -ms-flex-direction:column;
+      align-items: center;
+      -ms-flex-align: center;
+      width:100%;
+   }
+
+   .main-part3 .art
+   {
+       width:100%;
+       color:#f4f3f3;
+       position:relative;
+       background: #f4f3f3;
+       border-radius: 10px;
+   }
+
+   .main-part3 .art h2
+   {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: rgba(12,12,12,0.5);
+      width: 100%;
+      padding: 10px;
+      font-size: 1.5em;
+      margin-top: 10px;
+      border-bottom: 1px solid #2d4d58;
+      border-top: 1px solid #2d4d58;
+      box-shadow: 1px 1px 1px #2d4d58;
+      cursor: pointer;
+   }
+
+   .main-part3 .art span
+   {
+       margin-right: 10px;
+       margin-left: 8px;
+   }
+
+   .main-part3 figure
+   {
+     text-align: center;
+   }
+
+   .main-part3 .art img
+   {
+       max-width:300px;
+       width:300px;
+       height:300px;
+   }
+
+   .main-part3 .art ul
+   {
+      list-style-type: none;
+      margin: 5px 1px 1px 1px;
+      width: 100%;
+      position: absolute;
+      top:20%;
+      left:0px;
+      background: rgba(12,12,12,0.7);
+      -webkit-transition: max-height 1s;
+      -moz-transition: max-height 1s;
+      -ms-transition: max-height 1s;
+      -o-transition: max-height 1s;
+      transition: max-height 1s;
+      overflow: hidden;
+      max-height: 0px;
+      z-index: 1;
+   }
+
+   .main-part3 .art:hover ul
+   {
+        max-height: 100%;
+   }
+
+   .main-part3 .art ul li
+   {
+     padding:5px;
+   }
+
+   .main-part3 .art ul li span
+   {
+     font-size: 0.9em;
+   }
+
+   .form-part h2
+   {
+      position: relative;
+      color: #2d4d58;
+      border-bottom: 1px solid #2d4d58;
+      box-shadow: 1px 1px 5px #2d4d58;
+      text-indent: 20px;
+      padding: 2px 0px 2px 0px;
+      margin: 0;
+      font-size: 1.5em;
+   }
+
+   .form-part .myForm
+   {
+       margin-top: 30px;
+       margin-left: 50px;
+   }
+
+   .form-part .btn-form
+   {
+     width: 100%;
+     overflow: hidden;
+   }
+
+   .form-part .btn-form input
+   {
+     border-radius:5px;
+     padding:10px 15px 10px 15px;
+     float:right;
+     color:#f4f3f3;
+     background: #2d4d58;
+     display: inline-block;
+   }
+
+   footer
+   {
+     height:200px;
+     background: #0e0e0e;
+     margin-top: 40px;
+   }
+
+   footer ul
+   {
+     list-style-type: none;
+     display: flex;
+     display: -ms-flexbox;
+     flex-direction: column;
+     -ms-flex-direction:column;
+     width: 100%;
+     height: 100%;
+     align-items: center;
+     -ms-flex-align: center;
+     justify-content: center;
+     -ms-flex-pack: center;
+     align-content: flex-start;
+     -ms-flex-line-pack: flex-start;
+   }
+
+  @media only screen and (min-width: 768px)
+  {
+     .top-cab
+     {
+       display:block;
+     }
+
+     nav
+     {
+       display: inline-block !important;
+       top:50px;
+       right: 20px;
+     }
+
+    nav ul
+    {
+      background: transparent;
+    }
+
+    nav ul li
+    {
+       float: left;
+       width:auto;
+       display: inline-block;
+       line-height:30px;
+       border:none;
+    }
+
+     nav ul li a
+     {
+       position: relative;
+       display:inline-block;
+       height:100%;
+     }
+
+     nav ul li a + span
+     {
+       display: inline-block !important;
+       vertical-align: middle;
+       font-size: 0.7em;
+       color: #2d4d58;
+     }
+
+     .logo
+     {
+       position: absolute;
+       left: 30px;
+       width: 100px;
+     }
+
+     .logo a
+     {
+       height: 85px;
+       background:#fff url(../images/Logo.png) no-repeat 40% 100%;
+     }
+
+     header h1
+     {
+       position: absolute;
+       top: 55px;
+       left: 140px;
+       font-size:1em;
+       margin:0;
+     }
+
+     #close /* BOTON QUE CIERRA EL MENU PARA SOLO MOVILES */
+     {
+       display:none !important;
+     }
+
+     #btn-nav
+     {
+       display:none !important;
+     }
+
+     /* Slider */
+
+     #myslider
+     {
+        border-bottom: 2px solid #2d4d58;
+     }
+
+    /* Main-part1  */
+
+     .main-part1
+    {
+    }
+
+    .main-part1 .image
+    {
+      float:left;
+      width:25%;
+    }
+
+    .main-part1 .image img
+    {
+      max-height: 300px;
+      max-width: 300px;
+    }
+
+    .main-part1 .text
+    {
+      width: 75%;
+      display: inline-block;
+      left: -1px;
+    }
+
+    .main-part3
+    {
+       flex-direction:row;
+       -ms-flex-direction:row;
+       align-items: center;
+       -ms-flex-align: center;
+       justify-content: space-around;
+       -ms-flex-pack: justify;
+       -ms-flex-pack: space-around;
+       width:100%;
+    }
+
+    .main-part3 .art
+    {
+      width:40%;
+    }
+
+    .form-part .btn-form
+    {
+      width: 32%;
+      overflow: hidden;
+    }
+
+}
